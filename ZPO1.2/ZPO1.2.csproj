@@ -43,13 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Platnosci\IPlatnosc.cs" />
-    <Compile Include="Platnosci\Karta.cs" />
-    <Compile Include="Platnosci\Platnosc.cs" />
-    <Compile Include="Platnosci\Przelew.cs" />
+    <Compile Include="ObslugaPlatnosci\NotEnoughFundsOnCreditCardException.cs" />
+    <Compile Include="SystemSprzedazy\Koszyk.cs" />
+    <Compile Include="ObslugaPlatnosci\IPlatnosc.cs" />
+    <Compile Include="ObslugaPlatnosci\Karta.cs" />
+    <Compile Include="ObslugaPlatnosci\Platnosc.cs" />
+    <Compile Include="ObslugaPlatnosci\Przelew.cs" />
+    <Compile Include="SystemSprzedazy\Produkt.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sprzedaz.cs" />
+    <Compile Include="SystemSprzedazy\Sprzedaz.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
