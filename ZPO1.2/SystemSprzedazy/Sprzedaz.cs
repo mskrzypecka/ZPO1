@@ -13,6 +13,7 @@ namespace ZPO1._2
         public void Zaplac(double suma, SposobPlatnosci wybranaPlatnosc)
         {
             Platnosc platnosc = new Platnosc();
+            platnosc.zarejestrujPlatnosc();
 
             switch (wybranaPlatnosc)
             {
@@ -21,6 +22,7 @@ namespace ZPO1._2
                     {
                         platnosc = new Karta(100);
                         ((Karta)platnosc).Zaplac(suma);
+                        platnosc.generujPotwierdzenieZamowienia();
                     }
                     catch (NotEnoughFundsOnCreditCardException ex)
                     {
@@ -30,11 +32,9 @@ namespace ZPO1._2
                     break;
                 case SposobPlatnosci.Przelew:
                     platnosc = new Przelew();
+                    platnosc.generujPotwierdzenieZamowienia();
                     break;
             }
-
-            platnosc.zarejestrujPlatnosc();
-            platnosc.generujPotwierdzenieZamowienia();
         }
     }
 }

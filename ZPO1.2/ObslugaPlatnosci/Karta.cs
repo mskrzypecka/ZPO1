@@ -42,7 +42,6 @@ namespace ZPO1._2.Platnosci
             if (KartaPlatnicza.Saldo >= suma)
             {
                 KartaPlatnicza.Saldo -= suma;
-                generujPotwierdzenieZamowienia();
             }
             else
             {
